@@ -20,9 +20,12 @@ Route::get('/', function () {
 Route::prefix('admin')->namespace('Admin')->group(function() {
 
     Route::prefix('stores')->group(function() {
+
         Route::get('/', 'StoreController@index');
         Route::get('/create', 'StoreController@create');
         Route::post('/store', 'StoreController@store');
+        Route::get('/{store}/edit', 'StoreController@edit');
+        Route::put('/update/{store}', 'StoreController@update');
     });
 
 });
