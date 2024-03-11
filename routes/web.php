@@ -29,6 +29,8 @@ Route::prefix('admin')->namespace('Admin')->group(function() {
         Route::delete('/destroy/{store}', 'StoreController@destroy')->name('destroy');
     });
 
+    Route::resource('products', 'ProductController');
+
 });
 
 
