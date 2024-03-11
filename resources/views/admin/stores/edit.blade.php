@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <h1>Criar Loja</h1>
-    <form action="/admin/stores/update/{{$store->id}}" method="POST">
+    <h1>Editar Loja</h1>
+    <form action="{{route('admin.stores.update', ['store' => $store->id])}}" method="POST">
         @csrf
         @method("PUT")
         <div class="form-group">
