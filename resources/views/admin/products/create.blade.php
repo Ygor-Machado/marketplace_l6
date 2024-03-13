@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Criar Loja</h1>
+    <h1>Criar Produto</h1>
     <form action="{{route('products.store')}}" method="POST">
         @csrf
         <div class="form-group">
@@ -32,7 +32,7 @@
 
         <div class="form-group">
             <label>Lojas</label>
-            <select name="user" id="" class="form-control">
+            <select name="store" id="" class="form-control">
                 @foreach($stores as $store)
                     <option value="{{ $store->id }}">{{ $store->name }}</option>
                 @endforeach
