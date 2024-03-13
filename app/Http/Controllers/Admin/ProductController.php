@@ -104,10 +104,14 @@ class ProductController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $product
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($product)
     {
-        //
+        $product = $this->product->find($product);
+        $product->delete();
+
+        flash('Produto removido com sucesso!')->success();
+        return redirect()->route('products.index');
     }
 }
