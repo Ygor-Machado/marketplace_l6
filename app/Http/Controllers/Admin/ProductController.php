@@ -20,7 +20,7 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
@@ -32,13 +32,13 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function create()
     {
-        $store = Store::all(['id', 'name']);
+        $stores = Store::all(['id', 'name']);
 
-        return view('admin.products.create', compact('store'));
+        return view('admin.products.create', compact('stores'));
     }
 
     /**
@@ -67,11 +67,11 @@ class ProductController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $product
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function edit($product)
     {
-        $product = $this->product->find($product);
+        $product = $this->product->findOrFail($product);
 
         return view('admin.products.edit', compact('product'));
     }
