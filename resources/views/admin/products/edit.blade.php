@@ -3,7 +3,7 @@
 @section('content')
 
     <h1>Atualizar Produto</h1>
-    <form action="{{route('products.update', ['product' => $product->id])}}" method="POST">
+    <form action="{{route('admin.products.update', ['product' => $product->id])}}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">

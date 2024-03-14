@@ -55,7 +55,7 @@ class ProductController extends Controller
         $store->products()->create($data);
 
         flash('Produto criado com sucesso!')->success();
-        return redirect()->route('products.index');
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -97,7 +97,7 @@ class ProductController extends Controller
         $product->update($data);
 
         flash('Produto atualizado com sucesso!')->success();
-        return redirect()->route('products.index');
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -112,6 +112,6 @@ class ProductController extends Controller
         $product->delete();
 
         flash('Produto removido com sucesso!')->success();
-        return redirect()->route('products.index');
+        return redirect()->route('admin.products.index');
     }
 }
