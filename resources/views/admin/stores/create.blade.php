@@ -7,7 +7,7 @@
         @csrf
         <div class="form-group">
             <label>Nome Da Loja</label>
-            <input type="text" name="name" class="form-control @error('name')is-invalid" @enderror>
+            <input type="text" name="name" class="form-control @error('name')is-invalid @enderror" value="{{old('name')}}">
 
             @error('name')
               <div class="invalid-feedback">
@@ -18,7 +18,7 @@
 
         <div class="form-group">
             <label>Descrição</label>
-            <input type="text" name="description" class="form-control @error('description')is-invalid" @enderror">
+            <input type="text" name="description" class="form-control @error('description')is-invalid @enderror" value="{{old('description')}}">
 
             @error('description')
             <div class="invalid-feedback">
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label>Telefone</label>
-            <input type="text" name="phone" class="form-control @error('phone')is-invalid" @enderror">
+            <input type="text" name="phone" class="form-control @error('phone')is-invalid @enderror" value="{{old('phone')}}">
 
             @error('phone')
             <div class="invalid-feedback">
@@ -40,7 +40,7 @@
 
         <div class="form-group">
             <label>Celular</label>
-            <input type="text" name="mobile_phone" class="form-control @error('mobile_phone')is-invalid" @enderror">
+            <input type="text" name="mobile_phone" class="form-control @error('mobile_phone')is-invalid @enderror" value="{{old('mobile_phone')}}">
 
             @error('mobile_phone')
             <div class="invalid-feedback">
@@ -51,7 +51,7 @@
 
         <div class="form-group">
             <label>Slug</label>
-            <input type="text" name="slug" class="form-control @error('slug')is-invalid" @enderror">
+            <input type="text" name="slug" class="form-control @error('slug')is-invalid @enderror" value="{{old('slug')}}">
 
             @error('slug')
             <div class="invalid-feedback">
