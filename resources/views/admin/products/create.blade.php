@@ -60,15 +60,6 @@
             @enderror
         </div>
 
-        <div class="form-group">
-            <label>Lojas</label>
-            <select name="store" id="" class="form-control">
-                @foreach($stores as $store)
-                    <option value="{{ $store->id }}">{{ $store->name }}</option>
-                @endforeach
-            </select>
-        </div>
-
         <div>
             <button class="btn btn-lg btn-success mt-3" type="submit">Criar Produto</button>
         </div>
