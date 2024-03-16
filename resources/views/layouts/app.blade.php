@@ -45,7 +45,10 @@
     </nav>
 
     <div class="container">
-        @include('flash::message')
+        <div class="mt-3">
+            @include('flash::message')
+        </div>
+
         @yield('content')
     </div>
 </body>
