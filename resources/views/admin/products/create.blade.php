@@ -57,7 +57,7 @@
                 @endforeach
             </select>
 
-            @error('price')
+            @error('categories')
             <div class="invalid-feedback">
                 {{$message}}
             </div>
