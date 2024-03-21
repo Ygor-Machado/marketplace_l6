@@ -20,8 +20,8 @@
                 <td>{{$category->name}}</td>
                 <td width="15%">
                     <div class="btn-group">
-                        <a href="{{route('admin.categories.edit', ['categories' => $category->id])}}" class="btn btn-sm btn-primary">EDITAR</a>
-                        <form action="{{route('admin.categories.destroy', ['categories' => $category->id])}}" method="post">
+                        <a href="{{route('admin.categories.edit', ['category' => $category->id])}}" class="btn btn-sm btn-primary">EDITAR</a>
+                        <form action="{{route('admin.categories.destroy', ['category' => $category->id])}}" method="post">
                             @csrf
                             @method("DELETE")
                             <button type="submit" class="btn btn-sm btn-danger">REMOVER</button>

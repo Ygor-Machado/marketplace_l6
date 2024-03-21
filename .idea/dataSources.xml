@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="marketplace_6@localhost" uuid="7dde681c-5bae-4807-9f31-acfac933f5e2">
+    <data-source source="LOCAL" name="marketplace@localhost" uuid="718fe73f-222c-440c-bded-491fe0372b36">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/marketplace_6</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/marketplace</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
