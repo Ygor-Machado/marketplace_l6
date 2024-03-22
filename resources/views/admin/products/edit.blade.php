@@ -95,6 +95,11 @@
         @foreach($product->photos as $photo)
             <div class="col-4">
                 <img src="{{ asset('storage/' . $photo->image) }}" alt="" class="img-fluid">
+                <form action="{{route('admin.photo.remove', ['photoId' => $photo->id])}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-lg btn-danger mt-3 mb-3">Remover</button>
+                </form>
             </div>
         @endforeach
     </div>

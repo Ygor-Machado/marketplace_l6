@@ -35,6 +35,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('products', 'ProductController');
     Route::resource('categories', 'CategoryController');
 
+    Route::delete('photo/remove/{photoId}', 'ProductPhotoController@removePhoto')->name('photo.remove');
+
     });
 });
 
