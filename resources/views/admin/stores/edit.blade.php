@@ -3,7 +3,7 @@
 @section('content')
 
     <h1>Editar Loja</h1>
-    <form action="{{route('admin.stores.update', ['store' => $store->id])}}" method="POST">
+    <form action="{{route('admin.stores.update', ['store' => $store->id])}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method("PUT")
         <div class="form-group">
@@ -48,6 +48,11 @@
                 {{$message}}
             </div>
             @enderror
+        </div>
+
+        <div class="form-group">
+            <label>Logo da loja</label>
+            <input type="file" name="logo" class="form-control">
         </div>
 
         <div class="form-group">

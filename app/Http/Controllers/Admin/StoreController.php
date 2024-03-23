@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Store;
+use App\Traits\UploadTrait;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreRequest;
@@ -11,6 +12,7 @@ use App\Http\Requests\StoreRequest;
 class StoreController extends Controller
 {
 
+    use UploadTrait;
     public function __construct()
     {
         $this->middleware('user.has.store')->only(['create', 'store']);
@@ -34,6 +36,10 @@ class StoreController extends Controller
     {
         $data = $request->all();
         $user = auth()->user();
+
+        if ($request->hasFile('logo')) {
+            $data['logo'] = $this->imageUpload($request->file('logo'));
+        }
 
         $store = $user->store()->create($data);
 
